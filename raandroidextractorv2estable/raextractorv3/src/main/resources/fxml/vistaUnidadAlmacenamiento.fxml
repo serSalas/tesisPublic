@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="panelUnidadAlmacenamiento" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.ControladorUnidadAlmacenamiento">
+   <children>
+      <GridPane fx:id="panelBuscarRutaDestino" layoutX="1.0" layoutY="60.0" prefHeight="540.0" prefWidth="1200.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="379.0" minWidth="10.0" prefWidth="339.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="698.0" minWidth="10.0" prefWidth="547.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="381.0" minWidth="10.0" prefWidth="226.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="70.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="440.0" minHeight="10.0" prefHeight="427.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="48.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="410.0" prefWidth="547.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="393.0" layoutX="19.0" layoutY="17.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" width="505.0">
+                     <effect>
+                        <DropShadow height="30.0" radius="14.5" width="30.0" />
+                     </effect>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2652ab" height="261.0" layoutX="19.0" layoutY="17.0" stroke="#2652ab" strokeType="INSIDE" width="505.0" />
+                  <CubicCurve controlX1="-150.0" controlX2="115.0" controlY1="-400.0" controlY2="-125.0" endX="256.0" fill="#1e3d7e" layoutX="170.0" layoutY="275.0" opacity="0.44" startX="-150.0" stroke="#1e3d7e" />
+                  <CubicCurve controlX1="273.0" controlX2="219.0" controlY1="-119.0" controlY2="-244.0" endX="354.0" endY="2.0" fill="#1e3d7e" layoutX="170.0" layoutY="276.0" opacity="0.44" startX="-150.0" stroke="#1e3d7e" />
+                  <Text fill="#555555" layoutX="32.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-small" text="En esta opción debe seleccionar la unidad de almacenamiento para guardar la extracción de datos" wrappingWidth="472.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="32.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-high" text="Buscar ruta destino" wrappingWidth="208.2295060157776">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="261.0" fitWidth="529.0" layoutX="19.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-unidad-almacenamiento.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="botonRutaDestino" buttonType="RAISED" layoutX="437.0" layoutY="248.0" onMouseClicked="#clickBuscarRutaDestino" prefHeight="60.0" prefWidth="60.0" ripplerFill="WHITE" style="-fx-background-color: #1e3d7e; -fx-background-radius: 100;" text="" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Buscar ruta destino">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logo-buscar-directorio.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Line endX="325.0" layoutX="189.0" layoutY="337.0" startX="-160.0" stroke="#aba8a8" />
+                  <JFXCheckBox fx:id="hashMd5" checkedColor="#1e3d7e" layoutX="345.0" layoutY="349.0" selected="true" styleClass="text-medium" text="Hash MD5" unCheckedColor="#555555">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Generar Hash MD5" />
+                     </tooltip></JFXCheckBox>
+                  <JFXCheckBox fx:id="hashSha256" checkedColor="#1e3d7e" layoutX="345.0" layoutY="380.0" selected="true" styleClass="text-medium" text="Hash SHA-256" unCheckedColor="#555555">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="Generar Hash SHA-256" />
+                     </tooltip></JFXCheckBox>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="30.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-hash.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#555555" layoutX="88.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-small" text="Si desea verificar la integridad de los datos en la extracción de datos que se guardará en la unidad de almacenamiento, tildar en hash Md5 y/o Sha-256" wrappingWidth="244.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <GridPane fx:id="panelTitulo" layoutY="60.0" prefHeight="60.0" prefWidth="1200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="1133.0" minWidth="10.0" prefWidth="1133.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="#2652ab" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-high" text="Seleccione unidad de almacenamiento" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#555555" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-medium" text="Elija una unidad de almacenamiento para guardar la extracción de datos del dispositivo Android" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+      <GridPane layoutX="1126.0" layoutY="540.0" prefHeight="100.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="100.0" valignment="CENTER" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <JFXButton fx:id="botonSiguiente" buttonType="RAISED" onMouseClicked="#clickSiguiente" prefHeight="60.0" prefWidth="60.0" ripplerFill="WHITE" style="-fx-background-color: #1e3d7e; -fx-background-radius: 100;" text="" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Avanzar a la siguiente opción">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-siguiente.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </GridPane>
+      <GridPane fx:id="panelAyuda" layoutX="920.0" layoutY="60.0" prefHeight="540.0" prefWidth="279.0" style="-fx-background-color: #FFFFFF;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="565.0" minHeight="10.0" prefHeight="560.0" valignment="TOP" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="535.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo-ayuda-unidad-almacenamiento.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </GridPane>
+      <GridPane layoutY="1.0" prefHeight="60.0" prefWidth="1200.0" style="-fx-background-color: #2652ab;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="58.0" minWidth="10.0" prefWidth="58.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="252.0" minWidth="0.0" prefWidth="252.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1068.0" minWidth="10.0" prefWidth="535.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="310.0" minWidth="10.0" prefWidth="308.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="48.0" minWidth="10.0" prefWidth="48.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton graphicTextGap="0.0" onMouseClicked="#clickIrAtras" prefHeight="40.0" prefWidth="40.0" ripplerFill="WHITE" style="-fx-background-radius: 100; -fx-background-color: #2652AB;" text="" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="9.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Ir hacia atrás">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-flecha-izquierda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-high" text="Unidad de almacenamiento" GridPane.columnIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="NombreRutaDestino" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-high" text="Seleccionar ruta destino" GridPane.columnIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <JFXButton graphicTextGap="0.0" onMouseClicked="#clickIrAyuda" prefHeight="40.0" prefWidth="40.0" ripplerFill="WHITE" style="-fx-background-radius: 100; -fx-background-color: #2652AB;" text="" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="9.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Ayuda">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-ayuda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

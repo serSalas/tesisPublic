@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="199.0" prefWidth="361.0" style="-fx-background-color: #1e3d7e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.ControladorDesbloqueoProgreso">
+   <children>
+      <JFXButton layoutX="265.0" layoutY="160.0" onMouseClicked="#clickAceptar_2" ripplerFill="#1e3d7e" style="-fx-background-color: #FFFFFF; -fx-background-radius: 100;" styleClass="button-medium" text="ACEPTAR" textFill="#1e3d7e">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fill="#f5efef" layoutX="10.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-medium" text="Se completó con éxito el proceso de Bypass del bloqueo de pantalla." textAlignment="CENTER" wrappingWidth="345.47265625">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Line endX="183.0" layoutX="169.0" layoutY="146.0" startX="-160.0" stroke="#aba8a8" />
+      <Text fill="#fffbfb" layoutX="17.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-small" text="Pulse para ver el patrón de Desbloqueo." textAlignment="CENTER" wrappingWidth="327.0000011920929">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

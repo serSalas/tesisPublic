@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="362.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.ControladorDesbloqueoProgreso">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1e3d7e" height="158.0" layoutY="-3.0" stroke="#1e3d7e" strokeWidth="2.0" width="362.0" />
+      <JFXButton layoutX="265.0" layoutY="309.0" onMouseClicked="#clickAceptar_1" ripplerFill="#1e3d7e" style="-fx-background-color: #FFFFFF; -fx-background-radius: 100;" styleClass="button-medium" text="ACEPTAR" textFill="#1e3d7e">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text layoutX="10.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-medium" text="Hubo un problema en la generación del bypass del bloqueo de pantalla" wrappingWidth="345.47265625">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Line endX="183.0" layoutX="169.0" layoutY="295.0" startX="-160.0" stroke="#aba8a8" />
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="131.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo-incorrecto.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="mensajeError" fill="#555555" layoutX="10.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-small" text="Pulse en Aceptar para volver a la ventana de inicio. Se recomienda seguir los pasos correctamante para que se complete con éxito la extracción de datos a la unidad de almacenamiento." wrappingWidth="298.0000011920929">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

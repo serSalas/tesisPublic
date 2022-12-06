@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="panelPrincipal" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.ControladorRespuesta">
+   <children>
+      <GridPane fx:id="panelTitulo" layoutY="60.0" prefHeight="60.0" prefWidth="1200.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="1133.0" minWidth="10.0" prefWidth="948.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="panelImages" layoutY="59.0" prefHeight="534.0" prefWidth="1200.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="137.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1013.0" minWidth="10.0" prefWidth="959.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="124.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="388.0" minHeight="10.0" prefHeight="326.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="84.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="299.0" prefWidth="961.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Text fill="#2652ab" layoutX="329.0" layoutY="102.0" text="GRILLA DE REFERENCIA" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="200.0" fitWidth="217.0" layoutX="387.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/pad8.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="217.0" fitWidth="240.0" layoutX="744.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/lock.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="217.0" fitWidth="240.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/lock.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="secuencia" fill="#2652ab" layoutX="167.0" layoutY="21.0" textAlignment="CENTER" wrappingWidth="641.0">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <JFXButton fx:id="botonHome" buttonType="RAISED" onMouseClicked="#goToHome" prefHeight="60.0" prefWidth="187.0" ripplerFill="WHITE" style="-fx-background-radius: 100; -fx-background-color: #1E3D7E;" styleClass="button-high" text="Volver al Inicio" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip text="Regresar al Inicio">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </JFXButton>
+            <Text fill="#2652ab" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-medium" text="El código del Patrón de desbloqueo es:" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+      <GridPane fx:id="panelMenuDesplegable" layoutY="140.0" prefHeight="470.0" prefWidth="240.0" style="-fx-background-color: #FFFFFF;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="59.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="176.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="5.0" prefHeight="5.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="5.0" prefHeight="5.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="5.0" prefHeight="5.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="5.0" prefHeight="5.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="110.0" valignment="BASELINE" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #aaaaaa;">
+               <children>
+                  <ImageView fitHeight="170.0" fitWidth="170.0" layoutX="34.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-menu-desplegable.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <JFXButton alignment="BASELINE_LEFT" ellipsisString="" onMouseClicked="#goToHome" prefHeight="48.0" prefWidth="234.0" ripplerFill="#1e3d7e" styleClass="button-medium" text="Nuevo Caso" textFill="#1e3d7e" textOverrun="CENTER_ELLIPSIS" GridPane.rowIndex="2">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-crear.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" onMouseClicked="#clickVersionSoftware" prefHeight="48.0" prefWidth="234.0" ripplerFill="#1e3d7e" styleClass="button-medium" text="Versión del software" textFill="#1e3d7e" wrapText="true" GridPane.rowIndex="4">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-version-software.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" onMouseClicked="#clickCerrarVentanaPrincipal" prefHeight="48.0" prefWidth="234.0" ripplerFill="#1e3d7e" styleClass="button-medium" text="Salir" textFill="#1e3d7e" GridPane.rowIndex="6">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-salir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Line endX="140.0" fill="#555555" opacity="0.3" startX="-100.0" stroke="#555555" GridPane.rowIndex="3" />
+            <Line endX="140.0" fill="#555555" opacity="0.3" startX="-100.0" stroke="#555555" GridPane.rowIndex="5" />
+            <Line endX="140.0" fill="#555555" opacity="0.3" startX="-100.0" stroke="#555555" GridPane.rowIndex="7" />
+            <Line endX="140.0" fill="#555555" opacity="0.3" startX="-100.0" stroke="#555555" GridPane.rowIndex="1" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </GridPane>
+      <GridPane fx:id="panelAyuda" layoutX="930.0" layoutY="70.0" prefHeight="540.0" prefWidth="279.0" style="-fx-background-color: #FFFFFF;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="565.0" minHeight="10.0" prefHeight="320.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="255.0" minHeight="10.0" prefHeight="159.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="62.0" valignment="TOP" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="440.0" fitWidth="258.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo-ayuda-principal.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <ScrollPane layoutX="3.0" layoutY="4.0" prefHeight="132.0" prefWidth="272.0" style="-fx-background-color: #FFFFFF;" styleClass="workspace-grid">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <Text layoutX="6.0" layoutY="14.06689453125" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-small" text="Deprecada" wrappingWidth="251.9999950826168" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="2.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </GridPane>
+      <GridPane alignment="TOP_CENTER" layoutX="1.0" prefHeight="60.0" prefWidth="1200.0" style="-fx-background-color: #2652ab;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="58.0" minWidth="10.0" prefWidth="58.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1084.0" minWidth="10.0" prefWidth="1084.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <JFXButton graphicTextGap="0.0" onMouseClicked="#clickMenuDesplegable" prefHeight="40.0" prefWidth="40.0" ripplerFill="WHITE" style="-fx-background-radius: 100; -fx-background-color: #2652AB;" text="" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="9.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Abrir menú">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-hamburguesa.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton graphicTextGap="0.0" onMouseClicked="#clickIrAyuda" prefHeight="26.0" prefWidth="27.0" ripplerFill="WHITE" style="-fx-background-radius: 100; -fx-background-color: #2652AB;" text="" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="9.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Ayuda">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-ayuda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

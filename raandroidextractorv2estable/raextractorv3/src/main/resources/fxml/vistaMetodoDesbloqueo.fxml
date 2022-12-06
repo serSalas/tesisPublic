@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="panelMetodoDesbloqueo" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.ControladorMetodoDesbloqueo">
+   <children>
+      <GridPane fx:id="panelTitulo" layoutX="1.0" layoutY="61.0" prefHeight="60.0" prefWidth="1200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="1133.0" minWidth="10.0" prefWidth="1133.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fill="#2652ab" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-high" text="Seleccionar la técnica de Bypass del patrón de bloqueo de pantalla." GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#555555" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-medium" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+      <GridPane fx:id="panelListadoMetodosExtraccion" layoutY="60.0" prefHeight="539.0" prefWidth="1200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="509.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="304.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="374.0" prefWidth="278.0" GridPane.rowIndex="1">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="272.0" layoutX="340.0" layoutY="17.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="368.0">
+                     <effect>
+                        <DropShadow height="15.0" radius="7.0" width="15.0" />
+                     </effect>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2652ab" height="208.0" layoutX="340.0" layoutY="16.0" stroke="#2652ab" strokeType="INSIDE" width="368.0" />
+                  <CubicCurve controlX1="-150.00003051757812" controlX2="115.0" controlY1="-334.0" controlY2="-125.0" endX="219.0" fill="#1e3d7e" layoutX="488.0" layoutY="220.0" opacity="0.44" startX="-150.0" stroke="#1e3d7e" />
+                  <CubicCurve controlX1="137.0" controlX2="219.0" controlY1="-69.0" controlY2="-244.0" endX="219.0" fill="#1e3d7e" layoutX="489.0" layoutY="203.0" opacity="0.44" startX="-150.0" stroke="#1e3d7e" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="657.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/pat.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="0.4" contrast="-0.02" hue="-0.33" saturation="-0.03" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="190.0" fitWidth="387.0" layoutX="428.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/lock.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="0.55" contrast="0.19" hue="-0.62" saturation="0.52" />
+                     </effect>
+                  </ImageView>
+                  <JFXComboBox fx:id="listaMetodos" focusColor="#1e3d7e" layoutX="349.0" layoutY="235.0" onMouseClicked="#clickListaMetodos" prefHeight="40.0" prefWidth="300.0" promptText="Seleccionar método a utilizar." styleClass="button-small" unFocusColor="#555555">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXComboBox>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <GridPane layoutX="1106.0" layoutY="520.0" prefHeight="100.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="100.0" valignment="CENTER" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <JFXButton fx:id="botonSiguiente" buttonType="RAISED" onMouseClicked="#clickSiguiente" prefHeight="60.0" prefWidth="60.0" ripplerFill="WHITE" style="-fx-background-color: #1e3d7e; -fx-background-radius: 100;" text="" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip text="Avanzar a la siguiente opción">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-siguiente.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </GridPane>
+      <GridPane prefHeight="60.0" prefWidth="1200.0" style="-fx-background-color: #2652ab;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="58.0" minWidth="10.0" prefWidth="58.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="190.0" minWidth="0.0" prefWidth="190.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1068.0" minWidth="10.0" prefWidth="499.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1068.0" minWidth="10.0" prefWidth="400.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="48.0" minWidth="0.0" prefWidth="48.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="10.0" minWidth="1.0" prefWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <JFXButton graphicTextGap="0.0" onMouseClicked="#clickIrAtras" prefHeight="40.0" prefWidth="40.0" ripplerFill="WHITE" style="-fx-background-radius: 100; -fx-background-color: #2652AB;" text="" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="9.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Ir hacia atrás">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-flecha-izquierda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-high" text="Seleccionar Método" GridPane.columnIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="NombreDispositivo" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-high" text="Propiedades del dispositivo" GridPane.columnIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
